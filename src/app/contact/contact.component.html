@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div *ngFor="let i of contactData.data" class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img height="150px" src="{{i.image}}" class="card-img-top" alt="...">
+                          <h5 class="card-title">{{i.name}}</h5>
+                          <p class="card-text">{{i.id}}</p>
+                          <p class="card-text">{{i.email}}</p>
+                          <p class="card-text">{{i.vat}}</p>
+                          <p class="card-text">{{i.phone}}</p>
+                          <p class="card-text">{{i.country}}</p>
+                          <p class="card-text">{{i.website}}</p>
+                          <p>Address</p>
+                          <div *ngFor="let j of i.addresses">
+                            <p>{{j.id}}</p>
+                            <p>{{j.street}}</p>
+                            <p>{{j.streetName}}</p>
+                            <p>{{j.buildingNumber}}</p>
+                            <p>{{j.country}}</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
